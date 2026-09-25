@@ -7,7 +7,7 @@ metadata:
     app.kubernetes.io/name: flask-app
     app.kubernetes.io/part-of: msc-de1-project
   annotations:
-    kubernetes.io/change-cause: "Initial deployment - image 1.0.0"
+    kubernetes.io/change-cause: "Final deployment - image 1.1.0"
 spec:
   replicas: 2
   revisionHistoryLimit: 5
@@ -47,7 +47,7 @@ spec:
               app.kubernetes.io/name: flask-app
       containers:
         - name: flask-app
-          image: amsou/msc-de1-flask-app:1.0.0
+          image: amsou/msc-de1-flask-app:1.1.0
           imagePullPolicy: IfNotPresent
           ports:
             - name: http
