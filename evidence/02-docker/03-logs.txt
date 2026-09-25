@@ -1,14 +1,12 @@
-[2026-09-25 18:26:08 +0000] [1] [INFO] Starting gunicorn 26.2.0
-[2026-09-25 18:26:08 +0000] [1] [INFO] Listening at: http://0.0.0.0:5000 (1)
-[2026-09-25 18:26:08 +0000] [1] [INFO] Using worker: gthread
-[2026-09-25 18:26:08 +0000] [7] [INFO] Booting worker with pid: 7
-[2026-09-25 18:26:08 +0000] [1] [ERROR] Control server error: [Errno 30] Read-only file system: '/home/app'
-127.0.0.1 - - [25/Sep/2026:18:26:13 +0000] "GET / HTTP/1.1" 200 13 "-" "Python-urllib/3.12"
-127.0.0.1 - - [25/Sep/2026:18:26:27 +0000] "GET / HTTP/1.1" 200 13 "-" "Python-urllib/3.12"
-127.0.0.1 - - [25/Sep/2026:18:26:42 +0000] "GET / HTTP/1.1" 200 13 "-" "Python-urllib/3.12"
-127.0.0.1 - - [25/Sep/2026:18:26:57 +0000] "GET / HTTP/1.1" 200 13 "-" "Python-urllib/3.12"
-172.17.0.1 - - [25/Sep/2026:18:27:08 +0000] "GET / HTTP/1.1" 200 13 "-" "curl/8.21.0"
-172.17.0.1 - - [25/Sep/2026:18:27:08 +0000] "POST /items HTTP/1.1" 201 38 "-" "curl/8.21.0"
-172.17.0.1 - - [25/Sep/2026:18:27:08 +0000] "GET /items HTTP/1.1" 200 29 "-" "curl/8.21.0"
-172.17.0.1 - - [25/Sep/2026:18:27:08 +0000] "GET /items/0 HTTP/1.1" 200 26 "-" "curl/8.21.0"
-172.17.0.1 - - [25/Sep/2026:18:27:08 +0000] "GET /items/5 HTTP/1.1" 404 27 "-" "curl/8.21.0"
+[2026-09-25 18:39:33 +0000] [1] [INFO] Starting gunicorn 26.2.0
+[2026-09-25 18:39:33 +0000] [1] [INFO] Listening at: http://0.0.0.0:5000 (1)
+[2026-09-25 18:39:33 +0000] [1] [INFO] Using worker: gthread
+[2026-09-25 18:39:33 +0000] [7] [INFO] Booting worker with pid: 7
+[2026-09-25 18:39:33 +0000] [1] [ERROR] Control server error: [Errno 30] Read-only file system: '/home/app'
+127.0.0.1 - - [25/Sep/2026:18:39:37 +0000] "GET / HTTP/1.1" 200 13 "-" "Python-urllib/3.12"
+127.0.0.1 - - [25/Sep/2026:18:39:52 +0000] "GET / HTTP/1.1" 200 13 "-" "Python-urllib/3.12"
+172.17.0.1 - - [25/Sep/2026:18:39:57 +0000] "GET / HTTP/1.1" 200 13 "-" "curl/8.21.0"
+172.17.0.1 - - [25/Sep/2026:18:39:57 +0000] "POST /items HTTP/1.1" 201 38 "-" "curl/8.21.0"
+172.17.0.1 - - [25/Sep/2026:18:39:57 +0000] "GET /items HTTP/1.1" 200 29 "-" "curl/8.21.0"
+172.17.0.1 - - [25/Sep/2026:18:39:57 +0000] "GET /items/0 HTTP/1.1" 200 26 "-" "curl/8.21.0"
+172.17.0.1 - - [25/Sep/2026:18:39:57 +0000] "GET /items/5 HTTP/1.1" 404 27 "-" "curl/8.21.0"

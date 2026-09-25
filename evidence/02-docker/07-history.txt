@@ -1,23 +1,24 @@
-﻿IMAGE          CREATED              CREATED BY                                      SIZE      COMMENT
-e91d29b4f588   About a minute ago   CMD ["gunicorn" "--bind" "0.0.0.0:5000" "--wÔÇª   0B        buildkit.dockerfile.v0
-<missing>      About a minute ago   STOPSIGNAL SIGTERM                              0B        buildkit.dockerfile.v0
-<missing>      About a minute ago   HEALTHCHECK &{["CMD" "python" "-c" "import uÔÇª   0B        buildkit.dockerfile.v0
-<missing>      About a minute ago   EXPOSE [5000/tcp]                               0B        buildkit.dockerfile.v0
-<missing>      About a minute ago   USER 10001:10001                                0B        buildkit.dockerfile.v0
-<missing>      About a minute ago   COPY app/ ./app/ # buildkit                     32.8kB    buildkit.dockerfile.v0
-<missing>      About a minute ago   RUN /bin/sh -c pip install --no-cache-dir -rÔÇª   7.84MB    buildkit.dockerfile.v0
-<missing>      About a minute ago   COPY requirements.txt . # buildkit              12.3kB    buildkit.dockerfile.v0
-<missing>      About a minute ago   RUN /bin/sh -c groupadd --system --gid 10001ÔÇª   41kB      buildkit.dockerfile.v0
-<missing>      About a minute ago   WORKDIR /app                                    8.19kB    buildkit.dockerfile.v0
-<missing>      About a minute ago   ENV PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERÔÇª   0B        buildkit.dockerfile.v0
-<missing>      About a minute ago   LABEL org.opencontainers.image.title=msc-de1ÔÇª   0B        buildkit.dockerfile.v0
-<missing>      6 days ago           CMD ["python3"]                                 0B        buildkit.dockerfile.v0
-<missing>      6 days ago           RUN /bin/sh -c set -eux;  for src in idle3 pÔÇª   16.4kB    buildkit.dockerfile.v0
-<missing>      6 days ago           RUN /bin/sh -c set -eux;   savedAptMark="$(aÔÇª   41.4MB    buildkit.dockerfile.v0
-<missing>      6 days ago           ENV PYTHON_SHA256=5c8462af5790baf43a321a1559ÔÇª   0B        buildkit.dockerfile.v0
-<missing>      6 days ago           ENV PYTHON_VERSION=3.12.14                      0B        buildkit.dockerfile.v0
-<missing>      6 days ago           ENV GPG_KEY=7169605F62C751356D054A26A821E680ÔÇª   0B        buildkit.dockerfile.v0
-<missing>      6 days ago           RUN /bin/sh -c set -eux;  apt-get update;  aÔÇª   4.94MB    buildkit.dockerfile.v0
-<missing>      6 days ago           ENV LANG=C.UTF-8                                0B        buildkit.dockerfile.v0
-<missing>      6 days ago           ENV PATH=/usr/local/bin:/usr/local/sbin:/usrÔÇª   0B        buildkit.dockerfile.v0
-<missing>      7 days ago           # debian.sh --arch 'amd64' out/ 'trixie' '@1ÔÇª   87.6MB    debuerreotype 0.17
+﻿IMAGE          CREATED          CREATED BY                                      SIZE      COMMENT
+272661d45c94   29 seconds ago   CMD ["gunicorn" "--bind" "0.0.0.0:5000" "--wÔÇª   0B        buildkit.dockerfile.v0
+<missing>      29 seconds ago   STOPSIGNAL SIGTERM                              0B        buildkit.dockerfile.v0
+<missing>      29 seconds ago   HEALTHCHECK &{["CMD" "python" "-c" "import uÔÇª   0B        buildkit.dockerfile.v0
+<missing>      29 seconds ago   EXPOSE [5000/tcp]                               0B        buildkit.dockerfile.v0
+<missing>      29 seconds ago   USER 10001:10001                                0B        buildkit.dockerfile.v0
+<missing>      29 seconds ago   COPY app/ ./app/ # buildkit                     32.8kB    buildkit.dockerfile.v0
+<missing>      29 seconds ago   RUN /bin/sh -c pip install --no-cache-dir -rÔÇª   7.84MB    buildkit.dockerfile.v0
+<missing>      36 seconds ago   COPY requirements.txt . # buildkit              12.3kB    buildkit.dockerfile.v0
+<missing>      36 seconds ago   RUN /bin/sh -c addgroup -S -g 10001 app  && ÔÇª   32.8kB    buildkit.dockerfile.v0
+<missing>      36 seconds ago   WORKDIR /app                                    8.19kB    buildkit.dockerfile.v0
+<missing>      36 seconds ago   ENV PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERÔÇª   0B        buildkit.dockerfile.v0
+<missing>      36 seconds ago   LABEL org.opencontainers.image.title=msc-de1ÔÇª   0B        buildkit.dockerfile.v0
+<missing>      7 days ago       CMD ["python3"]                                 0B        buildkit.dockerfile.v0
+<missing>      7 days ago       RUN /bin/sh -c set -eux;  for src in idle3 pÔÇª   16.4kB    buildkit.dockerfile.v0
+<missing>      7 days ago       RUN /bin/sh -c set -eux;   apk add --no-cachÔÇª   44.1MB    buildkit.dockerfile.v0
+<missing>      7 days ago       ENV PYTHON_SHA256=5c8462af5790baf43a321a1559ÔÇª   0B        buildkit.dockerfile.v0
+<missing>      7 days ago       ENV PYTHON_VERSION=3.12.14                      0B        buildkit.dockerfile.v0
+<missing>      7 days ago       ENV GPG_KEY=7169605F62C751356D054A26A821E680ÔÇª   0B        buildkit.dockerfile.v0
+<missing>      7 days ago       RUN /bin/sh -c set -eux;  apk add --no-cacheÔÇª   2.83MB    buildkit.dockerfile.v0
+<missing>      7 days ago       ENV LANG=C.UTF-8                                0B        buildkit.dockerfile.v0
+<missing>      7 days ago       ENV PATH=/usr/local/bin:/usr/local/sbin:/usrÔÇª   0B        buildkit.dockerfile.v0
+<missing>      7 days ago       CMD ["/bin/sh"]                                 0B        buildkit.dockerfile.v0
+<missing>      7 days ago       ADD alpine-minirootfs-3.24.2-x86_64.tar.gz /ÔÇª   9.08MB    buildkit.dockerfile.v0

@@ -1,5 +1,6 @@
-# Image de base officielle, variante slim (petite, sans outils de build)
-FROM python:3.12-slim
+# Image officielle Python, variante Alpine : choisie apres le scan Trivy
+# (la variante slim/Debian contenait 44 HIGH dans des paquets OS inutiles a l'app)
+FROM python:3.12-alpine
 
 LABEL org.opencontainers.image.title="msc-de1-flask-app" \
       org.opencontainers.image.version="1.0.0" \
@@ -14,8 +15,8 @@ ENV PYTHONDONTWRITEBYTECODE=1 \
 WORKDIR /app
 
 # Utilisateur systeme non-root, sans home ni shell de connexion
-RUN groupadd --system --gid 10001 app \
- && useradd --system --uid 10001 --gid app --no-create-home --shell /usr/sbin/nologin app
+RUN addgroup -S -g 10001 app \
+ && adduser -S -u 10001 -G app -H -s /sbin/nologin app
 
 # Dependances d'abord (cache des layers), puis suppression de pip (inutile au runtime)
 COPY requirements.txt .

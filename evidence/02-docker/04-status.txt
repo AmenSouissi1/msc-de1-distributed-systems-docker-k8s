@@ -1,3 +1,3 @@
-﻿CONTAINER ID   IMAGE                           COMMAND                  CREATED              STATUS                        PORTS                                         NAMES
-47fd0237ff42   amsou/msc-de1-flask-app:1.0.0   "gunicorn --bind 0.0ÔÇª"   About a minute ago   Up About a minute (healthy)   0.0.0.0:5000->5000/tcp, [::]:5000->5000/tcp   flask-app
+﻿CONTAINER ID   IMAGE                           COMMAND                  CREATED          STATUS                    PORTS                                         NAMES
+605d254a1249   amsou/msc-de1-flask-app:1.0.0   "gunicorn --bind 0.0ÔÇª"   27 seconds ago   Up 25 seconds (healthy)   0.0.0.0:5000->5000/tcp, [::]:5000->5000/tcp   flask-app
 Health=healthy

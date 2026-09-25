@@ -1,2 +1,2 @@
 ﻿IMAGE                           ID             DISK USAGE   CONTENT SIZE   EXTRA
-amsou/msc-de1-flask-app:1.0.0   e91d29b4f588        187MB         45.4MB   U    
+amsou/msc-de1-flask-app:1.0.0   272661d45c94       84.2MB         20.2MB   U    
