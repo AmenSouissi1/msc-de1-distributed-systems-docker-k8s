@@ -1,1 +1,1 @@
-﻿
+﻿ReadOnlyRootfs=true CapDrop=[ALL] SecurityOpt=[no-new-privileges:true] Memory=268435456 NanoCpus=500000000 PidsLimit=100

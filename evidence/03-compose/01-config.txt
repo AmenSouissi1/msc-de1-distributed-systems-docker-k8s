@@ -1,1 +1,46 @@
-services.web: can't set distinct values on 'pids_limit' and 'deploy.resources.limits.pids': invalid compose project
+name: msc-de1-flask
+services:
+  web:
+    build:
+      context: C:\Users\DELL\distributed_system\msc-de1-distributed-systems-docker-k8s
+      dockerfile: Dockerfile
+    cap_drop:
+      - ALL
+    container_name: msc-de1-flask-app
+    deploy:
+      resources:
+        limits:
+          cpus: 0.5
+          memory: "268435456"
+          pids: 100
+    environment:
+      APP_ENV: local
+      TZ: UTC
+    healthcheck:
+      test:
+        - CMD
+        - python
+        - -c
+        - import urllib.request,sys; sys.exit(0 if urllib.request.urlopen('http://127.0.0.1:5000/', timeout=2).status == 200 else 1)
+      timeout: 3s
+      interval: 15s
+      retries: 3
+      start_period: 10s
+    image: amsou/msc-de1-flask-app:1.0.0
+    networks:
+      default: null
+    ports:
+      - mode: ingress
+        target: 5000
+        published: "5000"
+        protocol: tcp
+    read_only: true
+    restart: unless-stopped
+    security_opt:
+      - no-new-privileges:true
+    tmpfs:
+      - /tmp:size=16m
+    user: 10001:10001
+networks:
+  default:
+    name: msc-de1-flask_default

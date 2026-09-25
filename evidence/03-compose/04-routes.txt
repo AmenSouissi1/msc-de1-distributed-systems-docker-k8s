@@ -1,0 +1,24 @@
+﻿HTTP/1.1 200 OK
+Server: gunicorn
+Date: Fri, 25 Sep 2026 18:33:22 GMT
+Connection: keep-alive
+Content-Type: text/html; charset=utf-8
+Content-Length: 13
+
+Hello, Flask!
+HTTP/1.1 201 CREATED
+Server: gunicorn
+Date: Fri, 25 Sep 2026 18:33:22 GMT
+Connection: keep-alive
+Content-Type: application/json
+Content-Length: 38
+
+{"message":"Item added successfully"}
+HTTP/1.1 200 OK
+Server: gunicorn
+Date: Fri, 25 Sep 2026 18:33:22 GMT
+Connection: keep-alive
+Content-Type: application/json
+Content-Length: 29
+
+{"items":[{"name":"item1"}]}

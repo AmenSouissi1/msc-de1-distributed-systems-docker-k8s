@@ -1,0 +1,2 @@
+﻿NAME                IMAGE                           COMMAND                  SERVICE   CREATED          STATUS                    PORTS
+msc-de1-flask-app   amsou/msc-de1-flask-app:1.0.0   "gunicorn --bind 0.0ÔÇª"   web       26 seconds ago   Up 25 seconds (healthy)   0.0.0.0:5000->5000/tcp, [::]:5000->5000/tcp

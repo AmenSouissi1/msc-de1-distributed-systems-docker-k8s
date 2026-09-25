@@ -1,1 +1,6 @@
-services.web: can't set distinct values on 'pids_limit' and 'deploy.resources.limits.pids': invalid compose project
+ Network msc-de1-flask_default Creating 
+ Network msc-de1-flask_default Created 
+ Container msc-de1-flask-app Creating 
+ Container msc-de1-flask-app Created 
+ Container msc-de1-flask-app Starting 
+ Container msc-de1-flask-app Started 
