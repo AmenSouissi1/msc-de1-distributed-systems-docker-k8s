@@ -1,0 +1,2 @@
+﻿User=10001:10001 ExposedPorts={"5000/tcp":{}} Cmd=["gunicorn","--bind","0.0.0.0:5000","--workers","1","--threads","4","--worker-tmp-dir","/dev/shm","--access-logfile","-","--error-logfile","-","app:app"]
+ReadOnlyRootfs=true CapDrop=[ALL] SecurityOpt=[no-new-privileges:true]
