@@ -1,0 +1,32 @@
+1.0.0: Pulling from amsou/msc-de1-flask-app
+3856913b31f6: Pulling fs layer
+d0833c0d624e: Pulling fs layer
+d6a3d37cb257: Pulling fs layer
+e2de96513ba9: Pulling fs layer
+63de3d4c1d45: Pulling fs layer
+dfd5c69ca31c: Pulling fs layer
+6eec1681053c: Pulling fs layer
+d28481702f29: Pulling fs layer
+7abff04c4f31: Pulling fs layer
+3856913b31f6: Download complete
+6eec1681053c: Download complete
+dfd5c69ca31c: Download complete
+d0833c0d624e: Download complete
+d6a3d37cb257: Download complete
+63de3d4c1d45: Download complete
+e5f48808ca77: Download complete
+d28481702f29: Download complete
+e2de96513ba9: Download complete
+e2de96513ba9: Pull complete
+dfd5c69ca31c: Pull complete
+7abff04c4f31: Download complete
+7abff04c4f31: Pull complete
+6eec1681053c: Pull complete
+d0833c0d624e: Pull complete
+d6a3d37cb257: Pull complete
+63de3d4c1d45: Pull complete
+3856913b31f6: Pull complete
+d28481702f29: Pull complete
+Digest: sha256:272661d45c941199e36d9e72402dfb4ec63c6a98ac9df65cb9117b57d2aff1c3
+Status: Downloaded newer image for amsou/msc-de1-flask-app:1.0.0
+docker.io/amsou/msc-de1-flask-app:1.0.0
