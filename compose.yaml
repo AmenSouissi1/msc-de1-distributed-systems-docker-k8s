@@ -1,0 +1,39 @@
+# Execution locale reproductible de l'API Flask (un seul service)
+name: msc-de1-flask
+
+services:
+  web:
+    # Nom d'image clair : le meme que celui publie sur Docker Hub
+    image: amsou/msc-de1-flask-app:1.0.0
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: msc-de1-flask-app
+    ports:
+      - "5000:5000"
+    # Variables non sensibles uniquement ; surchargeables via un .env local (ignore par Git)
+    environment:
+      APP_ENV: ${APP_ENV:-local}
+      TZ: ${TZ:-UTC}
+    restart: unless-stopped
+    # Securite : meme niveau que dans Kubernetes
+    user: "10001:10001"
+    read_only: true
+    tmpfs:
+      - /tmp:size=16m
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    pids_limit: 100
+    deploy:
+      resources:
+        limits:
+          cpus: "0.50"
+          memory: 256M
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request,sys; sys.exit(0 if urllib.request.urlopen('http://127.0.0.1:5000/', timeout=2).status == 200 else 1)"]
+      interval: 15s
+      timeout: 3s
+      retries: 3
+      start_period: 10s
