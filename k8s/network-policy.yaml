@@ -1,0 +1,38 @@
+# Ingress : seuls les pods du namespace portant role=client peuvent joindre l'API (port 5000).
+# Egress : l'application n'a besoin que du DNS du cluster.
+# Note : kubectl port-forward et les probes du kubelet passent par le noeud et ne sont pas filtres.
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: flask-app-netpol
+  namespace: msc-de1-project
+  labels:
+    app.kubernetes.io/name: flask-app
+spec:
+  podSelector:
+    matchLabels:
+      app.kubernetes.io/name: flask-app
+  policyTypes:
+    - Ingress
+    - Egress
+  ingress:
+    - from:
+        - podSelector:
+            matchLabels:
+              role: client
+      ports:
+        - protocol: TCP
+          port: 5000
+  egress:
+    - to:
+        - namespaceSelector:
+            matchLabels:
+              kubernetes.io/metadata.name: kube-system
+          podSelector:
+            matchLabels:
+              k8s-app: kube-dns
+      ports:
+        - protocol: UDP
+          port: 53
+        - protocol: TCP
+          port: 53
