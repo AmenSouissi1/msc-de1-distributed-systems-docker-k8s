@@ -1,0 +1,35 @@
+﻿deployment.apps/flask-app configured
+Waiting for deployment "flask-app" rollout to finish: 1 out of 2 new replicas have been updated...
+Waiting for deployment "flask-app" rollout to finish: 1 out of 2 new replicas have been updated...
+Waiting for deployment "flask-app" rollout to finish: 1 out of 2 new replicas have been updated...
+Waiting for deployment "flask-app" rollout to finish: 1 old replicas are pending termination...
+Waiting for deployment "flask-app" rollout to finish: 1 old replicas are pending termination...
+Waiting for deployment "flask-app" rollout to finish: 1 old replicas are pending termination...
+deployment "flask-app" successfully rolled out
+deployment.apps/flask-app 
+REVISION  CHANGE-CAUSE
+3         Initial deployment - image 1.0.0
+4         Final deployment - image 1.1.0
+
+NAME                        READY   UP-TO-DATE   AVAILABLE   AGE   CONTAINERS   IMAGES                          SELECTOR
+deployment.apps/flask-app   2/2     2            2           16m   flask-app    amsou/msc-de1-flask-app:1.1.0   app.kubernetes.io/name=flask-app
+
+NAME                                   DESIRED   CURRENT   READY   AGE    CONTAINERS   IMAGES                          SELECTOR
+replicaset.apps/flask-app-86857f8975   0         0         0       16m    flask-app    amsou/msc-de1-flask-app:1.0.0   app.kubernetes.io/name=flask-app,pod-template-hash=86857f8975
+replicaset.apps/flask-app-fbb7675f4    2         2         2       112s   flask-app    amsou/msc-de1-flask-app:1.1.0   app.kubernetes.io/name=flask-app,pod-template-hash=fbb7675f4
+
+NAME                             READY   STATUS        RESTARTS   AGE   IP           NODE              NOMINATED NODE   READINESS GATES
+pod/flask-app-86857f8975-824px   1/1     Terminating   0          83s   10.244.1.5   msc-de1-worker    <none>           <none>
+pod/flask-app-fbb7675f4-5q8gw    1/1     Running       0          7s    10.244.1.6   msc-de1-worker    <none>           <none>
+pod/flask-app-fbb7675f4-5zb2d    1/1     Running       0          13s   10.244.2.9   msc-de1-worker2   <none>           <none>
+
+NAME                TYPE        CLUSTER-IP     EXTERNAL-IP   PORT(S)   AGE   SELECTOR
+service/flask-app   ClusterIP   10.96.164.25   <none>        80/TCP    16m   app.kubernetes.io/name=flask-app
+HTTP/1.1 200 OK
+Server: gunicorn
+Date: Fri, 25 Sep 2026 19:13:22 GMT
+Connection: keep-alive
+Content-Type: application/json
+Content-Length: 20
+
+{"version":"1.1.0"}

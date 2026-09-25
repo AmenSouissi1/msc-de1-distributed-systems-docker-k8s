@@ -1,0 +1,87 @@
+The push refers to repository [docker.io/amsou/msc-de1-flask-app]
+2a65045188f4: Waiting
+0de082ffa30f: Waiting
+6eec1681053c: Waiting
+7abff04c4f31: Waiting
+39230b067655: Waiting
+e2de96513ba9: Waiting
+009ba4eca352: Waiting
+b7a247230761: Waiting
+dfd5c69ca31c: Waiting
+532014bbdb7a: Waiting
+2a65045188f4: Waiting
+0de082ffa30f: Waiting
+6eec1681053c: Waiting
+7abff04c4f31: Waiting
+39230b067655: Waiting
+e2de96513ba9: Waiting
+009ba4eca352: Waiting
+b7a247230761: Waiting
+dfd5c69ca31c: Waiting
+532014bbdb7a: Waiting
+b7a247230761: Waiting
+dfd5c69ca31c: Waiting
+532014bbdb7a: Waiting
+2a65045188f4: Waiting
+0de082ffa30f: Waiting
+6eec1681053c: Waiting
+7abff04c4f31: Waiting
+39230b067655: Waiting
+e2de96513ba9: Waiting
+009ba4eca352: Waiting
+2a65045188f4: Waiting
+0de082ffa30f: Waiting
+6eec1681053c: Waiting
+7abff04c4f31: Waiting
+39230b067655: Waiting
+e2de96513ba9: Waiting
+009ba4eca352: Waiting
+b7a247230761: Waiting
+dfd5c69ca31c: Waiting
+532014bbdb7a: Waiting
+dfd5c69ca31c: Waiting
+532014bbdb7a: Waiting
+2a65045188f4: Waiting
+0de082ffa30f: Waiting
+6eec1681053c: Waiting
+7abff04c4f31: Waiting
+39230b067655: Waiting
+e2de96513ba9: Waiting
+009ba4eca352: Waiting
+b7a247230761: Waiting
+2a65045188f4: Waiting
+0de082ffa30f: Waiting
+6eec1681053c: Waiting
+7abff04c4f31: Waiting
+39230b067655: Waiting
+e2de96513ba9: Waiting
+009ba4eca352: Waiting
+b7a247230761: Waiting
+dfd5c69ca31c: Waiting
+532014bbdb7a: Waiting
+2a65045188f4: Waiting
+0de082ffa30f: Waiting
+6eec1681053c: Waiting
+7abff04c4f31: Waiting
+39230b067655: Waiting
+e2de96513ba9: Layer already exists
+009ba4eca352: Waiting
+b7a247230761: Waiting
+dfd5c69ca31c: Waiting
+532014bbdb7a: Layer already exists
+009ba4eca352: Waiting
+b7a247230761: Waiting
+dfd5c69ca31c: Waiting
+2a65045188f4: Waiting
+0de082ffa30f: Waiting
+6eec1681053c: Waiting
+7abff04c4f31: Layer already exists
+39230b067655: Waiting
+2a65045188f4: Already exists
+0de082ffa30f: Layer already exists
+6eec1681053c: Layer already exists
+39230b067655: Layer already exists
+009ba4eca352: Layer already exists
+b7a247230761: Layer already exists
+dfd5c69ca31c: Layer already exists
+latest: digest: sha256:c17444f6843522fa6dccf25051f80c51b00da389948803fd50386c5eb69448c3 size: 856

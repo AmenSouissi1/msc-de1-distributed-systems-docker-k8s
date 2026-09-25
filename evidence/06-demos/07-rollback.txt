@@ -1,0 +1,29 @@
+﻿=== kubectl rollout undo ===
+deployment.apps/flask-app rolled back
+Waiting for deployment "flask-app" rollout to finish: 1 out of 2 new replicas have been updated...
+Waiting for deployment "flask-app" rollout to finish: 1 out of 2 new replicas have been updated...
+Waiting for deployment "flask-app" rollout to finish: 1 out of 2 new replicas have been updated...
+Waiting for deployment "flask-app" rollout to finish: 1 old replicas are pending termination...
+Waiting for deployment "flask-app" rollout to finish: 1 old replicas are pending termination...
+Waiting for deployment "flask-app" rollout to finish: 1 old replicas are pending termination...
+deployment "flask-app" successfully rolled out
+amsou/msc-de1-flask-app:1.0.0
+=== /version apres rollback (retour 1.0.0 : 404 attendu) ===
+HTTP/1.1 404 NOT FOUND
+Server: gunicorn
+Date: Fri, 25 Sep 2026 19:12:07 GMT
+Connection: keep-alive
+Content-Type: text/html; charset=utf-8
+Content-Length: 207
+
+<!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+=== rollout history apres rollback ===
+deployment.apps/flask-app 
+REVISION  CHANGE-CAUSE
+2         Rolling update to 1.1.0 (adds /version endpoint)
+3         Initial deployment - image 1.0.0
+

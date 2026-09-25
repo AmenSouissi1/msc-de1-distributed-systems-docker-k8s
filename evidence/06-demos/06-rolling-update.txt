@@ -1,0 +1,46 @@
+﻿=== AVANT : /version en 1.0.0 (route inexistante) ===
+HTTP/1.1 404 NOT FOUND
+Server: gunicorn
+Date: Fri, 25 Sep 2026 19:11:25 GMT
+Connection: keep-alive
+Content-Type: text/html; charset=utf-8
+Content-Length: 207
+
+<!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+=== kubectl set image -> 1.1.0 ===
+deployment.apps/flask-app image updated
+deployment.apps/flask-app annotated
+Waiting for deployment "flask-app" rollout to finish: 1 out of 2 new replicas have been updated...
+Waiting for deployment "flask-app" rollout to finish: 1 out of 2 new replicas have been updated...
+Waiting for deployment "flask-app" rollout to finish: 1 out of 2 new replicas have been updated...
+Waiting for deployment "flask-app" rollout to finish: 1 old replicas are pending termination...
+Waiting for deployment "flask-app" rollout to finish: 1 old replicas are pending termination...
+Waiting for deployment "flask-app" rollout to finish: 1 old replicas are pending termination...
+deployment "flask-app" successfully rolled out
+NAME                                   DESIRED   CURRENT   READY   AGE   CONTAINERS   IMAGES                          SELECTOR
+replicaset.apps/flask-app-86857f8975   0         0         0       15m   flask-app    amsou/msc-de1-flask-app:1.0.0   app.kubernetes.io/name=flask-app,pod-template-hash=86857f8975
+replicaset.apps/flask-app-fbb7675f4    2         2         2       19s   flask-app    amsou/msc-de1-flask-app:1.1.0   app.kubernetes.io/name=flask-app,pod-template-hash=fbb7675f4
+
+NAME                             READY   STATUS        RESTARTS   AGE     IP           NODE              NOMINATED NODE   READINESS GATES
+pod/flask-app-86857f8975-l64mg   1/1     Terminating   0          3m34s   10.244.2.5   msc-de1-worker2   <none>           <none>
+pod/flask-app-fbb7675f4-69l4q    1/1     Running       0          9s      10.244.2.7   msc-de1-worker2   <none>           <none>
+pod/flask-app-fbb7675f4-7zvjn    1/1     Running       0          19s     10.244.1.4   msc-de1-worker    <none>           <none>
+=== APRES : /version en 1.1.0 ===
+HTTP/1.1 200 OK
+Server: gunicorn
+Date: Fri, 25 Sep 2026 19:11:49 GMT
+Connection: keep-alive
+Content-Type: application/json
+Content-Length: 20
+
+{"version":"1.1.0"}
+=== rollout history ===
+deployment.apps/flask-app 
+REVISION  CHANGE-CAUSE
+1         Initial deployment - image 1.0.0
+2         Rolling update to 1.1.0 (adds /version endpoint)
+

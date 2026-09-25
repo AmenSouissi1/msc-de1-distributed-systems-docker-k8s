@@ -1,0 +1,28 @@
+﻿=== AVANT ===
+NAME                         READY   STATUS    RESTARTS   AGE     IP           NODE              NOMINATED NODE   READINESS GATES
+flask-app-86857f8975-vhk85   1/1     Running   0          9m45s   10.244.2.2   msc-de1-worker2   <none>           <none>
+flask-app-86857f8975-x7nvb   1/1     Running   0          11m     10.244.1.3   msc-de1-worker    <none>           <none>
+=== kubectl delete pod flask-app-86857f8975-vhk85 ===
+pod "flask-app-86857f8975-vhk85" deleted from msc-de1-project namespace
+=== JUSTE APRES (remplacement en cours) ===
+NAME                         READY   STATUS    RESTARTS   AGE   IP           NODE              NOMINATED NODE   READINESS GATES
+flask-app-86857f8975-l64mg   0/1     Running   0          2s    10.244.2.5   msc-de1-worker2   <none>           <none>
+flask-app-86857f8975-x7nvb   1/1     Running   0          11m   10.244.1.3   msc-de1-worker    <none>           <none>
+Waiting for deployment "flask-app" rollout to finish: 1 of 2 updated replicas are available...
+deployment "flask-app" successfully rolled out
+=== APRES RECONCILIATION ===
+NAME                         READY   STATUS    RESTARTS   AGE   IP           NODE              NOMINATED NODE   READINESS GATES
+flask-app-86857f8975-l64mg   1/1     Running   0          7s    10.244.2.5   msc-de1-worker2   <none>           <none>
+flask-app-86857f8975-x7nvb   1/1     Running   0          11m   10.244.1.3   msc-de1-worker    <none>           <none>
+9m19s       Normal    Created             pod/client-allowed                Container created
+9m19s       Normal    Pulled              pod/client-allowed                Successfully pulled image "curlimages/curl:8.10.1" in 2.912s (2.912s including waiting). Image size: 9414401 bytes.
+9m15s       Normal    Pulled              pod/client-denied                 Container image "curlimages/curl:8.10.1" already present on machine and can be accessed by the pod
+9m15s       Normal    Scheduled           pod/client-denied                 Successfully assigned msc-de1-project/client-denied to msc-de1-worker2
+9m15s       Normal    Created             pod/client-denied                 Container created
+9m14s       Normal    Started             pod/client-denied                 Container started
+47s         Normal    Killing             pod/flask-app-86857f8975-vhk85    Stopping container flask-app
+47s         Normal    Scheduled           pod/flask-app-86857f8975-l64mg    Successfully assigned msc-de1-project/flask-app-86857f8975-l64mg to msc-de1-worker2
+47s         Normal    SuccessfulCreate    replicaset/flask-app-86857f8975   Created pod: flask-app-86857f8975-l64mg
+46s         Normal    Started             pod/flask-app-86857f8975-l64mg    Container started
+46s         Normal    Created             pod/flask-app-86857f8975-l64mg    Container created
+46s         Normal    Pulled              pod/flask-app-86857f8975-l64mg    Container image "amsou/msc-de1-flask-app:1.0.0" already present on machine and can be accessed by the pod
