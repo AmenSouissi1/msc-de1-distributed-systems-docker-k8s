@@ -25,3 +25,10 @@ def add_item():
     item = request.get_json()
     items.append(item)
     return {'message': 'Item added successfully'}, 201
+
+
+@app.route('/version', methods=['GET'])
+def version():
+    # Version injectee dans l'image au build (ARG/ENV APP_VERSION)
+    import os
+    return {'version': os.environ.get('APP_VERSION', 'unknown')}

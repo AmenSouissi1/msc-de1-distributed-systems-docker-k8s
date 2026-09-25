@@ -2,12 +2,16 @@
 # (la variante slim/Debian contenait 44 HIGH dans des paquets OS inutiles a l'app)
 FROM python:3.12-alpine
 
+# Version applicative, exposee par la route /version
+ARG APP_VERSION=1.1.0
+
 LABEL org.opencontainers.image.title="msc-de1-flask-app" \
-      org.opencontainers.image.version="1.0.0" \
+      org.opencontainers.image.version="${APP_VERSION}" \
       org.opencontainers.image.source="https://github.com/AmenSouissi1/msc-de1-distributed-systems-docker-k8s"
 
 # Pas de .pyc (compatible filesystem read-only), logs non bufferises, pas de cache pip
-ENV PYTHONDONTWRITEBYTECODE=1 \
+ENV APP_VERSION=${APP_VERSION} \
+    PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1 \
     PIP_NO_CACHE_DIR=1 \
     PIP_DISABLE_PIP_VERSION_CHECK=1
