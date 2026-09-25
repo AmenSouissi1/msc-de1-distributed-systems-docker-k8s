@@ -1,0 +1,5 @@
+﻿configmap/flask-app-config created
+deployment.apps/flask-app created
+namespace/msc-de1-project unchanged
+networkpolicy.networking.k8s.io/flask-app-netpol created
+service/flask-app created

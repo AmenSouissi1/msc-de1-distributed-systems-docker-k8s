@@ -1,0 +1,4 @@
+﻿BLOCKED
+pod "client-denied" deleted from msc-de1-project namespace
+NAME               POD-SELECTOR                       AGE
+flask-app-netpol   app.kubernetes.io/name=flask-app   3m12s

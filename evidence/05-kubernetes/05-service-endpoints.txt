@@ -1,0 +1,19 @@
+﻿NAME              ADDRESSTYPE   PORTS   ENDPOINTS               AGE
+flask-app-txdkt   IPv4          5000    10.244.1.3,10.244.2.2   116s
+Name:                     flask-app
+Namespace:                msc-de1-project
+Labels:                   app.kubernetes.io/name=flask-app
+                          app.kubernetes.io/part-of=msc-de1-project
+Annotations:              <none>
+Selector:                 app.kubernetes.io/name=flask-app
+Type:                     ClusterIP
+IP Family Policy:         SingleStack
+IP Families:              IPv4
+IP:                       10.96.164.25
+IPs:                      10.96.164.25
+Port:                     http  80/TCP
+TargetPort:               http/TCP
+Endpoints:                10.244.1.3:5000,10.244.2.2:5000
+Session Affinity:         None
+Internal Traffic Policy:  Cluster
+Events:                   <none>

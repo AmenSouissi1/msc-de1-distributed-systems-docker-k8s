@@ -1,0 +1,6 @@
+﻿uid=10001(app) gid=10001(app) groups=10001(app)
+touch: /app/hack: Read-only file system
+command terminated with exit code 1
+{"runAsGroup":10001,"runAsNonRoot":true,"runAsUser":10001,"seccompProfile":{"type":"RuntimeDefault"}}
+{"allowPrivilegeEscalation":false,"capabilities":{"drop":["ALL"]},"readOnlyRootFilesystem":true,"runAsNonRoot":true}
+{"limits":{"cpu":"500m","memory":"256Mi"},"requests":{"cpu":"100m","memory":"64Mi"}}

@@ -1,0 +1,1 @@
+﻿Hello, Flask!pod "client-allowed" deleted from msc-de1-project namespace
